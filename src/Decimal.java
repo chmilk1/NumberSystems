@@ -1,5 +1,4 @@
 
-
 import java.io.PrintWriter;
 
 import javax.swing.JOptionPane;
@@ -28,11 +27,14 @@ public class Decimal {
 	}
 
 	private void outHex() {
+
 		JOptionPane.showMessageDialog(null, "Your Awnser Is: " + output.toString());
+
 
 	}
 
 	private void toHex() {
+
 		boolean let = false;
 		int letn;
 		char[] numbers = input.toCharArray();
@@ -48,6 +50,7 @@ public class Decimal {
 				let = false;
 				int ccode = (numbers[i-1]-48)+65;
 				output.append((char) ccode);
+
 			}
 		}
 	}

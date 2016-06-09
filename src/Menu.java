@@ -9,12 +9,12 @@ public class Menu {
 	String returnChoice;
 	
 	public Menu(PrintWriter pw) {
-		// TODO Auto-generated constructor stub
+
 		this.pw = pw;
 	}
 
 	public void display() {
-		// TODO Auto-generated method stub
+
 		char[] c = {'A','B','C','D','E','F'};
 		for (char d : c) {
 			int x = d;
@@ -28,12 +28,11 @@ public class Menu {
 	}
 
 	public int getSelection() {
-		// TODO Auto-generated method stub
 		int i = Integer.parseInt(returnChoice);
 		if(i >= 1 && i <=6) 
 		return i;
 		else
 		return 7;
 	}
-
 }
+

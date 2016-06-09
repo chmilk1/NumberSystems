@@ -2,11 +2,18 @@
 
 import java.io.PrintWriter;
 
+import javax.swing.JOptionPane;
+
 public class Binary {
 
+	private int num;
+	private PrintWriter pw = null;
+	String s;
+	int dec;
+	
+
 	public Binary(PrintWriter pw) {
-		// TODO Auto-generated constructor stub
-		
+		this.pw = pw;
 	}
 
 	public void binToDec() {
@@ -14,38 +21,44 @@ public class Binary {
 		toDec();
 		outDec();
 	}
-	
+
 	public void binToHex() {
 		inputBin();
 		toHex();
 		outHex();
-		
+
 	}
+
 	private void outHex() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	private void toHex() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	private void outDec() {
-		// TODO Auto-generated method stub
-		
+		JOptionPane.showMessageDialog(null, s + " in decimal is: " + dec);
+
 	}
 
 	private void toDec() {
-		// TODO Auto-generated method stub
-		
+		int sum = 0;
+		int i = 0;
+		while(i < 32) {
+			int thisDigit = Integer.parseInt(s.charAt(32-i-1) + "");
+			sum += thisDigit * Math.pow(2.0, i);
+			i++;
+		}
+		dec = sum;
 	}
 
 	private void inputBin() {
-		// TODO Auto-generated method stub
-		
+		String cheese = JOptionPane.showInputDialog("What number?");
+		num = Integer.parseInt(cheese);
+		s = cheese;
 	}
-
-	
 
 }
